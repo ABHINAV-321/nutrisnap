@@ -21,7 +21,7 @@ class MealHistoryScreenState extends State<MealHistoryScreen> {
   }
 
   Future<void> _loadMeals() async {
-    final dbHelper = DatabaseHelper.instance;
+    final dbHelper = DatabaseHelper();
     final meals = await dbHelper.getMeals();
     setState(() {
       _meals = meals;
